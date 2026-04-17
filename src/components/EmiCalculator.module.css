@@ -1,0 +1,183 @@
+.calculatorWrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.slidersPanel {
+  padding: 3rem;
+}
+
+.inputGroup {
+  margin-bottom: 2.5rem;
+}
+
+.inputGroup:last-child {
+  margin-bottom: 0;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.labelRow label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.valueDisplay {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(29, 78, 216, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  border: 4px solid white;
+  transition: transform 0.1s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.resultPanel {
+  height: 100%;
+}
+
+.resultCard {
+  background: linear-gradient(145deg, var(--primary-dark), var(--primary));
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  color: white;
+  box-shadow: var(--shadow-xl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.emiAmount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+.breakdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breakdownItem:last-child {
+  border-bottom: none;
+}
+
+.breakdownLabel {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.breakdownValue {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.applyBtn {
+  width: 100%;
+  background-color: white;
+  color: var(--primary-dark);
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+
+.applyBtn:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .calculatorWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .slidersPanel {
+    padding: 1.5rem;
+  }
+  
+  .resultCard {
+    padding: 2rem;
+  }
+  
+  .emiAmount {
+    font-size: 2.5rem;
+  }
+  
+  .labelRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .breakdownItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .breakdownValue {
+    font-size: 1.25rem;
+    color: var(--secondary-light);
+  }
+}
+
