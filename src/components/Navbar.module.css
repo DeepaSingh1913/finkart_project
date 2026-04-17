@@ -14,9 +14,40 @@
   font-size: 0.875rem;
 }
 
-.contactInfo {
+.trustInfo {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.isoIcon {
+  font-size: 1rem;
+}
+
+.divider {
+  opacity: 0.5;
+  margin: 0 0.5rem;
+}
+
+.supportInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.callIcon {
+  font-size: 0.875rem;
+}
+
+.topLinks {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.hideMobile {
+  display: inline-block;
 }
 
 .phoneLink {
@@ -38,27 +69,56 @@
 }
 
 .nav {
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   max-width: 1200px;
   border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .navInner {
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 }
 
-.logoText {
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 8px;
+}
+
+.logoTextWrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logoFinkart {
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--foreground);
 }
 
-.logoHighlight {
+.logoFinance {
+  font-size: 0.75rem;
+  font-weight: 800;
   color: var(--primary);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .navLinks {
@@ -71,6 +131,10 @@
   color: var(--foreground);
   font-size: 1rem;
   position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .navLink::after {
@@ -91,6 +155,48 @@
 .navLink:hover::after {
   width: 100%;
 }
+
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownArrow {
+  font-size: 0.6rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-bg);
+  min-width: 200px;
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  z-index: 100;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownItem {
+  padding: 0.75rem 1.5rem;
+  color: var(--foreground);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background: rgba(29, 78, 216, 0.05);
+  color: var(--primary);
+  padding-left: 1.75rem;
+}
+
 
 .navContent {
   display: flex;
@@ -144,10 +250,26 @@
   .topbar .container {
     flex-direction: column;
     gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .trustInfo {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+  
+  .divider {
+    display: none;
+  }
+  
+  .hideMobile {
+    display: none;
   }
   
   .topLinks {
     gap: 1rem;
+    justify-content: center;
   }
 
   .mobileMenuBtn {
@@ -190,6 +312,38 @@
     padding: 0.75rem 0;
   }
   
+  .dropdownContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdownMenu {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+    align-items: center;
+    border-left: 2px solid var(--border);
+    border-radius: 0;
+  }
+
+  .dropdownItem {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .dropdownItem:hover {
+    padding-left: 0;
+    background: transparent;
+  }
+  
   .navActions {
     width: 100%;
     display: flex;
@@ -197,4 +351,5 @@
     margin-top: 1rem;
   }
 }
+
 

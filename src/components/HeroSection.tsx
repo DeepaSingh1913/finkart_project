@@ -5,6 +5,7 @@ export default function HeroSection() {
   return (
     <section className={styles.hero}>
       <div className={styles.background}></div>
+      <div className={styles.backgroundOverlay}></div>
       <div className={`container ${styles.container}`}>
         <div className={styles.content}>
           <h1 className={`${styles.title} animate-fade-in`}>

@@ -9,15 +9,25 @@
 
 .background {
   position: absolute;
-  top: -10%;
-  right: -10%;
-  width: 60%;
-  height: 80%;
-  background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-  opacity: 0.1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  opacity: 0.85;
   z-index: -1;
-  border-radius: 50%;
-  filter: blur(80px);
 }
 
 .container {

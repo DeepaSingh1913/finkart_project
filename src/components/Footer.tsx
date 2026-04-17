@@ -7,7 +7,11 @@ export default function Footer() {
       <div className={`container ${styles.footerGrid}`}>
         <div className={styles.footerBrand}>
           <Link href="/" className={styles.logo}>
-            <span className={styles.logoText}>Dhansampatti<span className={styles.logoHighlight}>Finance</span></span>
+            <div className={styles.logoMark}>F</div>
+            <div className={styles.logoTextWrapper}>
+              <span className={styles.logoFinkart}>Finkart</span>
+              <span className={styles.logoFinance}>Finance</span>
+            </div>
           </Link>
           <p className={styles.description}>
             Your trusted partner in wealth creation. We provide premium financial solutions, from exclusive home loans to investment planning, tailored for the ambitious Indian family.
@@ -57,7 +61,7 @@ export default function Footer() {
 
       <div className={styles.footerBottom}>
         <div className={`container flex justify-between items-center ${styles.footerBottomInner}`}>
-          <p>&copy; {new Date().getFullYear()} Dhansampatti Finance. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Finkart Finance. All rights reserved.</p>
           <div className={styles.legalLinks}>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Use</Link>
